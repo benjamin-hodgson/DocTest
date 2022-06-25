@@ -1,0 +1,30 @@
+<Project>
+    <PropertyGroup>
+        <Authors>benjamin.hodgson</Authors>
+        <Copyright>© Benjamin Hodgson, 2022</Copyright>
+        <Description>Documentation testing tools, for myself</Description>
+        <PackageTags>testing</PackageTags>
+
+        <PackageProjectUrl>https://github.com/benjamin-hodgson/Benjamin.Pizza.DocTest</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/benjamin-hodgson/Benjamin.Pizza.DocTest.git</RepositoryUrl>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+
+        <TargetFramework>net6.0</TargetFramework>
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        
+        <IncludeSymbols>true</IncludeSymbols>
+        <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+
+        <SignAssembly>true</SignAssembly>
+        <AssemblyOriginatorKeyFile>$(MSBuildThisFileDirectory)Benjamin.Pizza.DocTest.snk</AssemblyOriginatorKeyFile>
+
+        <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
+
+        <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
+        <AnalysisMode>all</AnalysisMode>
+        <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+        <NoWarn>$(NoWarn);NU1507</NoWarn>
+    </PropertyGroup>
+</Project>

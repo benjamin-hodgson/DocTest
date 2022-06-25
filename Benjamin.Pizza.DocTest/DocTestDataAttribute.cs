@@ -1,0 +1,50 @@
+using System.Reflection;
+using System.Xml.Linq;
+
+using Xunit.Sdk;
+
+namespace Benjamin.Pizza.DocTest;
+
+/// <summary>
+/// A <see cref="DataAttribute"/> for doctests
+/// </summary>
+public sealed class DocTestDataAttribute : DataAttribute
+{
+    /// <summary>
+    /// A type (any type) in the assembly whose documentation you want to test
+    /// </summary>
+    public Type TypeInAssemblyToDoctest { get; }
+
+    /// <summary>
+    /// Code to inject into each doctest script
+    /// </summary>
+    public string? Preamble { get; set; }
+
+    /// <summary>Constructor</summary>
+    public DocTestDataAttribute(Type typeInAssemblyToDoctest)
+    {
+        TypeInAssemblyToDoctest = typeInAssemblyToDoctest;
+    }
+
+    /// <inheritdoc cref="DataAttribute.GetData"/>
+    public override IEnumerable<object[]> GetData(MethodInfo testMethod)
+    {
+        var assembly = TypeInAssemblyToDoctest.Assembly;
+        var path = Path.ChangeExtension(assembly.Location, "xml");
+        var xml = XDocument.Parse(File.ReadAllText(path));
+        return (
+            from mem in xml.Descendants()
+            where mem.Name == "member"
+            from ex in mem.Descendants()
+            where ex.Name == "example"
+            let codes = ex
+                .Elements()
+                .Where(c => c.Name == "code" && c.Attribute("doctest")?.Value == "true")
+                .Select((x, i) => (ix: i, code: x.Value))
+            from c in codes
+            let name = ex.Attribute("name")!.Value
+                + (codes.Count() > 1 ? " > " + c.ix : "")
+            select new DocTest(assembly, name, c.code, Preamble)
+        ).Distinct().Select(x => new[] { x });
+    }
+}
