@@ -1,0 +1,22 @@
+{
+  "Benjamin.Pizza.DocTest.DocTest.html": {
+    "href": "Benjamin.Pizza.DocTest.DocTest.html",
+    "title": "Class DocTest | Benjamin.Pizza.DocTest",
+    "keywords": "Class DocTest A doctest Inheritance System.Object DocTest Declaration public class DocTest : Object Examples Console.WriteLine(\"Hello world\"); // Output: // Hello world Constructors DocTest(Assembly, String, String, String) Constructor Declaration public DocTest(Assembly assembly, string name, string code, string preamble) Parameters Type Name Description System.Reflection.Assembly assembly System.String name System.String code System.String preamble Methods Run() Run the test Declaration public Task Run() Returns Type Description System.Threading.Tasks.Task ToString() ToString Declaration public override string ToString() Returns Type Description System.String"
+  },
+  "Benjamin.Pizza.DocTest.DocTestDataAttribute.html": {
+    "href": "Benjamin.Pizza.DocTest.DocTestDataAttribute.html",
+    "title": "Class DocTestDataAttribute | Benjamin.Pizza.DocTest",
+    "keywords": "Class DocTestDataAttribute A Xunit.Sdk.DataAttribute for doctests Inheritance System.Object DocTestDataAttribute Declaration public sealed class DocTestDataAttribute : DataAttribute Constructors DocTestDataAttribute(Type) Constructor Declaration public DocTestDataAttribute(Type typeInAssemblyToDoctest) Parameters Type Name Description System.Type typeInAssemblyToDoctest Properties Preamble Code to inject into each doctest script Declaration public string Preamble { get; set; } Property Value Type Description System.String TypeInAssemblyToDoctest A type (any type) in the assembly whose documentation you want to test Declaration public Type TypeInAssemblyToDoctest { get; } Property Value Type Description System.Type Methods GetData(MethodInfo) Declaration public override IEnumerable<object[]> GetData(MethodInfo testMethod) Parameters Type Name Description System.Reflection.MethodInfo testMethod Returns Type Description System.Collections.Generic.IEnumerable < System.Object []>"
+  },
+  "Benjamin.Pizza.DocTest.html": {
+    "href": "Benjamin.Pizza.DocTest.html",
+    "title": "Namespace Benjamin.Pizza.DocTest | Benjamin.Pizza.DocTest",
+    "keywords": "Namespace Benjamin.Pizza.DocTest Classes DocTest A doctest DocTestDataAttribute A Xunit.Sdk.DataAttribute for doctests"
+  },
+  "index.html": {
+    "href": "index.html",
+    "title": "Page Redirection",
+    "keywords": ""
+  }
+}
