@@ -1,6 +1,9 @@
 using System.Reflection;
 using System.Xml.Linq;
 
+using Microsoft.CodeAnalysis.CSharp.Scripting;
+using Microsoft.CodeAnalysis.Scripting;
+
 using Xunit.Sdk;
 
 namespace Benjamin.Pizza.DocTest;
@@ -30,6 +33,10 @@ public sealed class DocTestDataAttribute : DataAttribute
     public override IEnumerable<object[]> GetData(MethodInfo testMethod)
     {
         var assembly = TypeInAssemblyToDoctest.Assembly;
+
+        var options = ScriptOptions.Default.AddReferences(assembly).AddImports("System");
+        var script = CSharpScript.Create(Preamble ?? "", options);
+
         var path = Path.ChangeExtension(assembly.Location, "xml");
         var xml = XDocument.Parse(File.ReadAllText(path));
         return (
@@ -44,7 +51,7 @@ public sealed class DocTestDataAttribute : DataAttribute
             from c in codes
             let name = ex.Attribute("name")!.Value
                 + (codes.Count() > 1 ? " > " + c.ix : "")
-            select new DocTest(assembly, name, c.code, Preamble)
+            select new DocTest(name, c.code, script)
         ).Distinct().Select(x => new[] { x });
     }
 }

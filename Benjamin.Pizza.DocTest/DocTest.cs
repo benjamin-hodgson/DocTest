@@ -1,8 +1,6 @@
 using System.Diagnostics.CodeAnalysis;
-using System.Reflection;
 using System.Text.RegularExpressions;
 
-using Microsoft.CodeAnalysis.CSharp.Scripting;
 using Microsoft.CodeAnalysis.Scripting;
 
 using Xunit;
@@ -20,18 +18,22 @@ namespace Benjamin.Pizza.DocTest;
 [SuppressMessage("naming", "CA1724", Justification = "DGAF")]  // "The type name conflicts in whole or in part with the namespace name"
 public class DocTest
 {
-    private readonly Assembly _assembly;
+    private static readonly Regex _outputRegex = new(@"// Output:\s*", RegexOptions.Compiled);
+    private static readonly Regex _commentRegex = new(@"^\s*(//( |$))?", RegexOptions.Compiled);
+    private readonly Script _script;
     private readonly string _name;
     private readonly string _code;
-    private readonly string? _preamble;
 
     /// <summary>Constructor</summary>
-    public DocTest(Assembly assembly, string name, string code, string? preamble)
+    public DocTest(string name, string code, Script preamble)
     {
-        _assembly = assembly;
-        _name = name;
+        ArgumentNullException.ThrowIfNull(name);
+        ArgumentNullException.ThrowIfNull(code);
+        ArgumentNullException.ThrowIfNull(preamble);
+
+        _script = preamble.ContinueWith(code);
         _code = code;
-        _preamble = preamble;
+        _name = name;
     }
 
     /// <summary>ToString</summary>
@@ -40,23 +42,16 @@ public class DocTest
     /// <summary>Run the test</summary>
     public async Task Run()
     {
-        var (output, error) = await RunDocTest();
+        var (output, error) = await RedirectConsole(() => _script.RunAsync());
         Assert.Equal("", error);
         Assert.Equal(GetExpected(), SplitLines(output));
     }
 
-    private Task<(string output, string error)> RunDocTest()
-    {
-        var options = ScriptOptions.Default.AddReferences(_assembly).AddImports("System");
-
-        return RedirectConsole(() => CSharpScript.RunAsync(_preamble + _code, options));
-    }
-
     private IEnumerable<string> GetExpected()
     {
-        var match = new Regex(@"// Output:\s*").Match(_code);
+        var match = _outputRegex.Match(_code);
         return SplitLines(_code[(match.Index + match.Length)..])
-            .Select(line => new Regex(@"^\s*(//( |$))?").Replace(line, ""));
+            .Select(line => _commentRegex.Replace(line, ""));
     }
 
     private static async Task<(string output, string error)> RedirectConsole(Func<Task> action)
