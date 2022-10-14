@@ -13,12 +13,12 @@ references:
   commentId: T:Benjamin.Pizza.DocTest.DocTest
   fullName: Benjamin.Pizza.DocTest.DocTest
   nameWithType: DocTest
-- uid: Benjamin.Pizza.DocTest.DocTest.#ctor(System.Reflection.Assembly,System.String,System.String,System.String)
-  name: DocTest(Assembly, String, String, String)
-  href: Benjamin.Pizza.DocTest.DocTest.html#Benjamin_Pizza_DocTest_DocTest__ctor_System_Reflection_Assembly_System_String_System_String_System_String_
-  commentId: M:Benjamin.Pizza.DocTest.DocTest.#ctor(System.Reflection.Assembly,System.String,System.String,System.String)
-  fullName: Benjamin.Pizza.DocTest.DocTest.DocTest(System.Reflection.Assembly, System.String, System.String, System.String)
-  nameWithType: DocTest.DocTest(Assembly, String, String, String)
+- uid: Benjamin.Pizza.DocTest.DocTest.#ctor(System.String,System.String,Microsoft.CodeAnalysis.Scripting.Script)
+  name: DocTest(String, String, Script)
+  href: Benjamin.Pizza.DocTest.DocTest.html#Benjamin_Pizza_DocTest_DocTest__ctor_System_String_System_String_Microsoft_CodeAnalysis_Scripting_Script_
+  commentId: M:Benjamin.Pizza.DocTest.DocTest.#ctor(System.String,System.String,Microsoft.CodeAnalysis.Scripting.Script)
+  fullName: Benjamin.Pizza.DocTest.DocTest.DocTest(System.String, System.String, Microsoft.CodeAnalysis.Scripting.Script)
+  nameWithType: DocTest.DocTest(String, String, Script)
 - uid: Benjamin.Pizza.DocTest.DocTest.#ctor*
   name: DocTest
   href: Benjamin.Pizza.DocTest.DocTest.html#Benjamin_Pizza_DocTest_DocTest__ctor_
