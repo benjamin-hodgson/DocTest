@@ -7,7 +7,7 @@ using Xunit;
 
 namespace Benjamin.Pizza.DocTest;
 
-/// <summary>A doctest</summary>
+/// <summary>A doctest.</summary>
 /// <example name="A test for the doctest">
 /// <code doctest="true">
 /// Console.WriteLine("Hello world");
@@ -15,7 +15,7 @@ namespace Benjamin.Pizza.DocTest;
 /// // Hello world
 /// </code>
 /// </example>
-[SuppressMessage("naming", "CA1724", Justification = "DGAF")]  // "The type name conflicts in whole or in part with the namespace name"
+[SuppressMessage("naming", "CA1724:The type name conflicts in whole or in part with the namespace name", Justification = "DGAF")]
 public class DocTest
 {
     private static readonly Regex _outputRegex = new(@"// Output:\s*", RegexOptions.Compiled);
@@ -24,7 +24,10 @@ public class DocTest
     private readonly string _name;
     private readonly string _code;
 
-    /// <summary>Constructor</summary>
+    /// <summary>Constructor.</summary>
+    /// <param name="name">The name of the test.</param>
+    /// <param name="code">The test's code.</param>
+    /// <param name="preamble">Code to prepend to the <paramref name="code"/>.</param>
     public DocTest(string name, string code, Script preamble)
     {
         ArgumentNullException.ThrowIfNull(name);
@@ -36,10 +39,12 @@ public class DocTest
         _name = name;
     }
 
-    /// <summary>ToString</summary>
+    /// <summary>ToString.</summary>
+    /// <returns>A string.</returns>
     public override string ToString() => _name;
 
-    /// <summary>Run the test</summary>
+    /// <summary>Run the test.</summary>
+    /// <returns>A task.</returns>
     public async Task Run()
     {
         var (output, error) = await RedirectConsole(() => _script.RunAsync());
@@ -71,6 +76,7 @@ public class DocTest
             Console.SetOut(oldConsoleOut);
             Console.SetError(oldConsoleErr);
         }
+
         return (outBuffer.ToString(), errBuffer.ToString());
     }
 

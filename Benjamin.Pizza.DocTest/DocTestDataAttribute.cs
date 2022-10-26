@@ -9,21 +9,22 @@ using Xunit.Sdk;
 namespace Benjamin.Pizza.DocTest;
 
 /// <summary>
-/// A <see cref="DataAttribute"/> for doctests
+/// A <see cref="DataAttribute"/> for doctests.
 /// </summary>
 public sealed class DocTestDataAttribute : DataAttribute
 {
     /// <summary>
-    /// A type (any type) in the assembly whose documentation you want to test
+    /// A type (any type) in the assembly whose documentation you want to test.
     /// </summary>
     public Type TypeInAssemblyToDoctest { get; }
 
     /// <summary>
-    /// Code to inject into each doctest script
+    /// Code to inject into each doctest script.
     /// </summary>
     public string? Preamble { get; set; }
 
-    /// <summary>Constructor</summary>
+    /// <summary>Constructor.</summary>
+    /// <param name="typeInAssemblyToDoctest">A type in the target assembly.</param>
     public DocTestDataAttribute(Type typeInAssemblyToDoctest)
     {
         TypeInAssemblyToDoctest = typeInAssemblyToDoctest;
