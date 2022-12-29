@@ -3,14 +3,8 @@ $(document).ready(() => {
     tocFilter();
     localNav();
     search();
-
-
-    if (window.hljs) {
-        hljs.highlightAll();
-    } else {
-        const script = document.getElementById("highlightjs-script");
-        script.onload = () => { hljs.highlightAll(); };
-    }
+    hljs.highlightAll();
+    
 
 
     function expanders() {

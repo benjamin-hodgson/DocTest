@@ -1,5 +1,5 @@
 (function () {
-  importScripts('third-party/lunr.min.js');
+  importScripts('lunr.min.js');
 
   var lunrIndex;
 
