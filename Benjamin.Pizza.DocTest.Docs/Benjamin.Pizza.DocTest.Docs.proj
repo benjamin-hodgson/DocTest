@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.Build.NoTargets">
+
+    <PropertyGroup>
+        <IsPackable>false</IsPackable>
+        <RollForward>major</RollForward>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <IsDocumentationProject>true</IsDocumentationProject>
+        <DocumentationSiteTitle>Benjamin.Pizza.DocTest</DocumentationSiteTitle>
+        <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="../Benjamin.Pizza.DocTest/Benjamin.Pizza.DocTest.csproj">
+            <OutputItemType>DocumentationAssembly</OutputItemType>
+        </ProjectReference>
+    </ItemGroup>
+
+</Project>

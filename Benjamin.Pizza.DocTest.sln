@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Benjamin.Pizza.DocTest", "B
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Benjamin.Pizza.DocTest.Tests", "Benjamin.Pizza.DocTest.Tests\Benjamin.Pizza.DocTest.Tests.csproj", "{1C06AA63-F035-4A8B-BE15-19383F4F5133}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Benjamin.Pizza.DocTest.Docs", "Benjamin.Pizza.DocTest.Docs\Benjamin.Pizza.DocTest.Docs.proj", "{BC2D7FD4-A949-4236-8A63-A69FD0BBDB63}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,9 @@ Global
 		{1C06AA63-F035-4A8B-BE15-19383F4F5133}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1C06AA63-F035-4A8B-BE15-19383F4F5133}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1C06AA63-F035-4A8B-BE15-19383F4F5133}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC2D7FD4-A949-4236-8A63-A69FD0BBDB63}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC2D7FD4-A949-4236-8A63-A69FD0BBDB63}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC2D7FD4-A949-4236-8A63-A69FD0BBDB63}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC2D7FD4-A949-4236-8A63-A69FD0BBDB63}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
