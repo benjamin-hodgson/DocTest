@@ -12,6 +12,7 @@
         <TargetFramework>net6.0</TargetFramework>
         <Nullable>enable</Nullable>
         <ImplicitUsings>enable</ImplicitUsings>
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
 
         <AssemblyOriginatorKeyFile>$(MSBuildThisFileDirectory)Benjamin.Pizza.DocTest.snk</AssemblyOriginatorKeyFile>
 
