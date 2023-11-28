@@ -47,7 +47,7 @@ public class DocTest
     /// <returns>A task.</returns>
     public async Task Run()
     {
-        var (output, error) = await RedirectConsole(() => _script.RunAsync());
+        var (output, error) = await RedirectConsole(() => _script.RunAsync()).ConfigureAwait(false);
         Assert.Equal("", error);
         Assert.Equal(GetExpected(), SplitLines(output));
     }
@@ -59,7 +59,7 @@ public class DocTest
             .Select(line => _commentRegex.Replace(line, ""));
     }
 
-    private static async Task<(string output, string error)> RedirectConsole(Func<Task> action)
+    private static async Task<(string Output, string Error)> RedirectConsole(Func<Task> action)
     {
         using var outBuffer = new StringWriter();
         using var errBuffer = new StringWriter();
@@ -69,7 +69,7 @@ public class DocTest
         Console.SetError(errBuffer);
         try
         {
-            await action();
+            await action().ConfigureAwait(false);
         }
         finally
         {
@@ -80,6 +80,8 @@ public class DocTest
         return (outBuffer.ToString(), errBuffer.ToString());
     }
 
+    private static readonly string[] _newlines = { "\r\n", "\n" };
+
     private static string[] SplitLines(string str)
-        => str.Split(new[] { "\r\n", "\n" }, StringSplitOptions.None);
+        => str.Split(_newlines, StringSplitOptions.None);
 }

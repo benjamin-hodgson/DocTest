@@ -1,4 +1,5 @@
 <Project>
+
     <PropertyGroup>
         <Authors>benjamin.hodgson</Authors>
         <Copyright>© Benjamin Hodgson, 2022</Copyright>
@@ -9,7 +10,7 @@
         <RepositoryUrl>https://github.com/benjamin-hodgson/Benjamin.Pizza.DocTest.git</RepositoryUrl>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
 
-        <TargetFramework>net6.0</TargetFramework>
+        <TargetFramework>net8.0</TargetFramework>
         <Nullable>enable</Nullable>
         <ImplicitUsings>enable</ImplicitUsings>
         <GenerateDocumentationFile>true</GenerateDocumentationFile>
@@ -17,5 +18,7 @@
         <AssemblyOriginatorKeyFile>$(MSBuildThisFileDirectory)Benjamin.Pizza.DocTest.snk</AssemblyOriginatorKeyFile>
 
         <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
+        <UseArtifactsOutput>true</UseArtifactsOutput>
     </PropertyGroup>
+
 </Project>
