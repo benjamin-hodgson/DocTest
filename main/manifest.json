@@ -1,6 +1,5 @@
 {
-  "homepages": [],
-  "source_base_path": "/home/runner/work/Benjamin.Pizza.DocTest/Benjamin.Pizza.DocTest/Benjamin.Pizza.DocTest.Docs/obj/Release",
+  "source_base_path": "/home/runner/work/Benjamin.Pizza.DocTest/Benjamin.Pizza.DocTest/artifacts/obj/Benjamin.Pizza.DocTest.Docs/release",
   "xrefmap": "xrefmap.yml",
   "files": [
     {
@@ -52,7 +51,6 @@
       "version": ""
     }
   ],
-  "version_info": {},
   "groups": [
     {
       "xrefmap": "xrefmap.yml"
