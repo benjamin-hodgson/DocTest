@@ -1,0 +1,59 @@
+{
+  "source_base_path": "/home/runner/work/Benjamin.Pizza.DocTest/Benjamin.Pizza.DocTest/artifacts/obj/Benjamin.Pizza.DocTest.Docs/release",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Resource",
+      "output": {
+        "resource": {
+          "relative_path": "index.json"
+        }
+      }
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Benjamin.Pizza.DocTest.DocTest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Benjamin.Pizza.DocTest.DocTest.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Benjamin.Pizza.DocTest.DocTestDataAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Benjamin.Pizza.DocTest.DocTestDataAttribute.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "Benjamin.Pizza.DocTest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "Benjamin.Pizza.DocTest.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html"
+        }
+      },
+      "version": ""
+    }
+  ],
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}
