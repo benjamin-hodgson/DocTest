@@ -4,7 +4,6 @@
         <IsPackable>true</IsPackable>
         <IsTestProject>false</IsTestProject>
         <GenerateDocumentationFile>true</GenerateDocumentationFile>
-        <!-- <NoWarn>$(NoWarn);CA2007</NoWarn> -->
     </PropertyGroup>
 
     <ItemGroup>
