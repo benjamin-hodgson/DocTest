@@ -79,12 +79,12 @@ references:
   fullName.vb: Benjamin.Pizza.DocTest.DocTestDataAttribute.New
   nameWithType: DocTestDataAttribute.DocTestDataAttribute
   nameWithType.vb: DocTestDataAttribute.New
-- uid: Benjamin.Pizza.DocTest.DocTestDataAttribute.GetData(System.Reflection.MethodInfo)
-  name: GetData(MethodInfo)
-  href: Benjamin.Pizza.DocTest.DocTestDataAttribute.html#Benjamin_Pizza_DocTest_DocTestDataAttribute_GetData_System_Reflection_MethodInfo_
-  commentId: M:Benjamin.Pizza.DocTest.DocTestDataAttribute.GetData(System.Reflection.MethodInfo)
-  fullName: Benjamin.Pizza.DocTest.DocTestDataAttribute.GetData(System.Reflection.MethodInfo)
-  nameWithType: DocTestDataAttribute.GetData(MethodInfo)
+- uid: Benjamin.Pizza.DocTest.DocTestDataAttribute.GetData(System.Reflection.MethodInfo,Xunit.Sdk.DisposalTracker)
+  name: GetData(MethodInfo, DisposalTracker)
+  href: Benjamin.Pizza.DocTest.DocTestDataAttribute.html#Benjamin_Pizza_DocTest_DocTestDataAttribute_GetData_System_Reflection_MethodInfo_Xunit_Sdk_DisposalTracker_
+  commentId: M:Benjamin.Pizza.DocTest.DocTestDataAttribute.GetData(System.Reflection.MethodInfo,Xunit.Sdk.DisposalTracker)
+  fullName: Benjamin.Pizza.DocTest.DocTestDataAttribute.GetData(System.Reflection.MethodInfo, Xunit.Sdk.DisposalTracker)
+  nameWithType: DocTestDataAttribute.GetData(MethodInfo, DisposalTracker)
 - uid: Benjamin.Pizza.DocTest.DocTestDataAttribute.GetData*
   name: GetData
   href: Benjamin.Pizza.DocTest.DocTestDataAttribute.html#Benjamin_Pizza_DocTest_DocTestDataAttribute_GetData_
@@ -103,6 +103,18 @@ references:
   commentId: Overload:Benjamin.Pizza.DocTest.DocTestDataAttribute.Preamble
   fullName: Benjamin.Pizza.DocTest.DocTestDataAttribute.Preamble
   nameWithType: DocTestDataAttribute.Preamble
+- uid: Benjamin.Pizza.DocTest.DocTestDataAttribute.SupportsDiscoveryEnumeration
+  name: SupportsDiscoveryEnumeration()
+  href: Benjamin.Pizza.DocTest.DocTestDataAttribute.html#Benjamin_Pizza_DocTest_DocTestDataAttribute_SupportsDiscoveryEnumeration
+  commentId: M:Benjamin.Pizza.DocTest.DocTestDataAttribute.SupportsDiscoveryEnumeration
+  fullName: Benjamin.Pizza.DocTest.DocTestDataAttribute.SupportsDiscoveryEnumeration()
+  nameWithType: DocTestDataAttribute.SupportsDiscoveryEnumeration()
+- uid: Benjamin.Pizza.DocTest.DocTestDataAttribute.SupportsDiscoveryEnumeration*
+  name: SupportsDiscoveryEnumeration
+  href: Benjamin.Pizza.DocTest.DocTestDataAttribute.html#Benjamin_Pizza_DocTest_DocTestDataAttribute_SupportsDiscoveryEnumeration_
+  commentId: Overload:Benjamin.Pizza.DocTest.DocTestDataAttribute.SupportsDiscoveryEnumeration
+  fullName: Benjamin.Pizza.DocTest.DocTestDataAttribute.SupportsDiscoveryEnumeration
+  nameWithType: DocTestDataAttribute.SupportsDiscoveryEnumeration
 - uid: Benjamin.Pizza.DocTest.DocTestDataAttribute.TypeInAssemblyToDoctest
   name: TypeInAssemblyToDoctest
   href: Benjamin.Pizza.DocTest.DocTestDataAttribute.html#Benjamin_Pizza_DocTest_DocTestDataAttribute_TypeInAssemblyToDoctest

@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8">
@@ -12,15 +12,15 @@
 
     
         <link rel="icon" href="/favicon.ico" type="image/x-icon">
-        <link rel="shortcut" "icon"="" href="/favicon.ico" type="image/x-icon">
+        <link rel=shortcut "icon" href="/favicon.ico" type="image/x-icon">
     
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2.1.1/out/water.min.css" integrity="sha256-QST90Wzz4PEr5KlclQaOCsjc00FTyf86Wrj41oqZB4w=" crossorigin="anonymous">
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/highlight.css">
     
         <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-        <script async="" id="highlightjs-script" src="js/third-party/highlight.js"></script>
-        <script defer="" src="js/main.js"></script>
+        <script async id="highlightjs-script" src="js/third-party/highlight.js"></script>
+        <script defer src="js/main.js"></script>
     
     
     </head>
@@ -64,7 +64,7 @@
 <article class="col">
         <h1 id="Benjamin_Pizza_DocTest_DocTestDataAttribute"><a href="#Benjamin_Pizza_DocTest_DocTestDataAttribute">Class DocTestDataAttribute
 </a></h1>
-        <div><p>A <span class="xref">Xunit.Sdk.DataAttribute</span> for doctests.</p>
+        <div><p>A <span class="xref">Xunit.v3.DataAttribute</span> for doctests.</p>
 </div>
             <h5>Inheritance</h5>
             <ul>
@@ -73,11 +73,27 @@
                     <li><span class="xref">DataAttribute</span></li>
                 <li>DocTestDataAttribute</li>
             </ul>
+            <h5>Implements</h5>
+            <ul>
+                    <li><span class="xref">IDataAttribute</span></li>
+            </ul>
 
             <h5>Inherited Members</h5>
             <ul>
                     <li>
+                            <span class="xref">DataAttribute.Explicit</span>
+                    </li>
+                    <li>
                             <span class="xref">DataAttribute.Skip</span>
+                    </li>
+                    <li>
+                            <span class="xref">DataAttribute.TestDisplayName</span>
+                    </li>
+                    <li>
+                            <span class="xref">DataAttribute.Timeout</span>
+                    </li>
+                    <li>
+                            <span class="xref">DataAttribute.Traits</span>
                     </li>
                     <li>
                             <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.attribute.getcustomattributes#system-attribute-getcustomattributes(system-reflection-memberinfo-system-type)">Attribute.GetCustomAttributes(MemberInfo, Type)</a>
@@ -205,7 +221,7 @@
             </ul>
 
         <h5>Declaration</h5>
-        <pre><code class="lang- hljs">public sealed class DocTestDataAttribute : DataAttribute</code></pre>
+        <pre><code class="lang- hljs">public sealed class DocTestDataAttribute : DataAttribute, IDataAttribute</code></pre>
 
 
 
@@ -322,11 +338,11 @@
 
         
                 <a id="Benjamin_Pizza_DocTest_DocTestDataAttribute_GetData_"></a>
-                <h4 id="Benjamin_Pizza_DocTest_DocTestDataAttribute_GetData_System_Reflection_MethodInfo_"><a href="#Benjamin_Pizza_DocTest_DocTestDataAttribute_GetData_System_Reflection_MethodInfo_">GetData(MethodInfo)</a></h4>
+                <h4 id="Benjamin_Pizza_DocTest_DocTestDataAttribute_GetData_System_Reflection_MethodInfo_Xunit_Sdk_DisposalTracker_"><a href="#Benjamin_Pizza_DocTest_DocTestDataAttribute_GetData_System_Reflection_MethodInfo_Xunit_Sdk_DisposalTracker_">GetData(MethodInfo, DisposalTracker)</a></h4>
                 <div><p>Returns the data to be used to test the theory.</p>
 </div>
                 <h5>Declaration</h5>
-                    <pre><code class="lang- hljs">public override IEnumerable&lt;object[]&gt; GetData(MethodInfo testMethod)</code></pre>
+                    <pre><code class="lang- hljs">public override ValueTask&lt;IReadOnlyCollection&lt;ITheoryDataRow&gt;&gt; GetData(MethodInfo testMethod, DisposalTracker disposalTracker)</code></pre>
 
                         <h5>Parameters</h5>
                         <table>
@@ -341,7 +357,13 @@
                                 <tr>
                                     <td><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.reflection.methodinfo">MethodInfo</a></p></td>
                                     <td><p>testMethod</p></td>
-                                    <td><p>The method that is being tested</p>
+                                    <td><p>The test method the data attribute is attached to</p>
+</td>
+                                </tr>
+                                <tr>
+                                    <td><p><span class="xref">DisposalTracker</span></p></td>
+                                    <td><p>disposalTracker</p></td>
+                                    <td><p>The disposal tracker used to dispose the data</p>
 </td>
                                 </tr>
                             </tbody>
@@ -357,10 +379,8 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>[]&gt;</p></td>
-                                    <td><p>One or more sets of theory data. Each invocation of the test method
-is represented by a single object array.</p>
-</td>
+                                    <td><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1">ValueTask</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<span class="xref">ITheoryDataRow</span>&gt;&gt;</p></td>
+                                    <td></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -370,12 +390,53 @@ is represented by a single object array.</p>
 
 
                     <h5>Overrides</h5>
-                    <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.reflection.methodinfo">DataAttribute.GetData(MethodInfo)</a></div>
+                    <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.reflection.methodinfo">DataAttribute.GetData(MethodInfo, DisposalTracker)</a></div>
+
+
+                
+
+        
+                <a id="Benjamin_Pizza_DocTest_DocTestDataAttribute_SupportsDiscoveryEnumeration_"></a>
+                <h4 id="Benjamin_Pizza_DocTest_DocTestDataAttribute_SupportsDiscoveryEnumeration"><a href="#Benjamin_Pizza_DocTest_DocTestDataAttribute_SupportsDiscoveryEnumeration">SupportsDiscoveryEnumeration()</a></h4>
+                <div><p>Returns <code>true</code> if the data attribute supports enumeration during
+discovery; <code>false</code> otherwise. Data attributes with expensive computational
+costs and/or randomized data sets should return <code>false</code>.</p>
+</div>
+                <h5>Declaration</h5>
+                    <pre><code class="lang- hljs">public override bool SupportsDiscoveryEnumeration()</code></pre>
+
+
+                        <h5>Returns</h5>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Type</th>
+                                    <th>Description</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></p></td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+
+
+
+
+                    <h5>Overrides</h5>
+                    <div><span class="xref">Xunit.v3.DataAttribute.SupportsDiscoveryEnumeration()</span></div>
 
 
                 
 
 
+        <h3 id="implements"><a href="#implements">Implements</a></h3>
+        <div>
+                <span class="xref">Xunit.v3.IDataAttribute</span>
+        </div>
 
 
 
@@ -412,7 +473,8 @@ is represented by a single object array.</p>
 </a>
 
                             <ul>
-                                    <li><a href="#Benjamin_Pizza_DocTest_DocTestDataAttribute_GetData_System_Reflection_MethodInfo_">GetData(MethodInfo)</a></li>
+                                    <li><a href="#Benjamin_Pizza_DocTest_DocTestDataAttribute_GetData_System_Reflection_MethodInfo_Xunit_Sdk_DisposalTracker_">GetData(MethodInfo, DisposalTracker)</a></li>
+                                    <li><a href="#Benjamin_Pizza_DocTest_DocTestDataAttribute_SupportsDiscoveryEnumeration">SupportsDiscoveryEnumeration()</a></li>
                             </ul>
                         </li>
                 </ul>
