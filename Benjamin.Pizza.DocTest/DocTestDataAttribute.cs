@@ -4,7 +4,9 @@ using System.Xml.Linq;
 using Microsoft.CodeAnalysis.CSharp.Scripting;
 using Microsoft.CodeAnalysis.Scripting;
 
+using Xunit;
 using Xunit.Sdk;
+using Xunit.v3;
 
 namespace Benjamin.Pizza.DocTest;
 
@@ -31,7 +33,9 @@ public sealed class DocTestDataAttribute : DataAttribute
     }
 
     /// <inheritdoc cref="DataAttribute.GetData"/>
-    public override IEnumerable<object[]> GetData(MethodInfo testMethod)
+    public override async ValueTask<IReadOnlyCollection<ITheoryDataRow>> GetData(
+        MethodInfo testMethod,
+        DisposalTracker disposalTracker)
     {
         var assembly = TypeInAssemblyToDoctest.Assembly;
 
@@ -39,7 +43,7 @@ public sealed class DocTestDataAttribute : DataAttribute
         var script = CSharpScript.Create(Preamble ?? "", options);
 
         var path = Path.ChangeExtension(assembly.Location, "xml");
-        var xml = XDocument.Parse(File.ReadAllText(path));
+        var xml = XDocument.Parse(await File.ReadAllTextAsync(path).ConfigureAwait(false));
         return (
             from mem in xml.Descendants()
             where mem.Name == "member"
@@ -53,6 +57,13 @@ public sealed class DocTestDataAttribute : DataAttribute
             let name = ex.Attribute("name")!.Value
                 + (codes.Count() > 1 ? " > " + c.ix : "")
             select new DocTest(name, c.code, script)
-        ).Distinct().Select(x => new[] { x });
+        )
+            .Distinct()
+            .Select(x => ConvertDataRow(new[] { x }))
+            .ToList();
     }
+
+    /// <inheritdoc cref="DataAttribute.SupportsDiscoveryEnumeration"/>
+    public override bool SupportsDiscoveryEnumeration()
+        => true;
 }

@@ -9,8 +9,8 @@
 
     <ItemGroup>
         <PackageReference Include="Microsoft.CodeAnalysis.CSharp.Scripting" />
-        <PackageReference Include="xunit.assert" />
-        <PackageReference Include="xunit.core" />
+        <PackageReference Include="xunit.v3.assert" />
+        <PackageReference Include="xunit.v3.extensibility.core" />
     </ItemGroup>
 
 </Project>
