@@ -10,7 +10,6 @@
         <RepositoryUrl>https://github.com/benjamin-hodgson/Benjamin.Pizza.DocTest.git</RepositoryUrl>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
 
-        <TargetFramework>net8.0</TargetFramework>
         <Nullable>enable</Nullable>
         <ImplicitUsings>enable</ImplicitUsings>
         <GenerateDocumentationFile>true</GenerateDocumentationFile>
