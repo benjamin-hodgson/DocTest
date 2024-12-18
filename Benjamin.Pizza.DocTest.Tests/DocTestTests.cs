@@ -2,7 +2,7 @@ using Xunit;
 
 namespace Benjamin.Pizza.DocTest.Tests;
 
-public class DocTestTests
+internal class DocTestTests
 {
     [Theory]
     [DocTestData(typeof(DocTest))]
