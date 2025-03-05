@@ -17,6 +17,7 @@
         <AssemblyOriginatorKeyFile>$(MSBuildThisFileDirectory)Benjamin.Pizza.DocTest.snk</AssemblyOriginatorKeyFile>
 
         <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
+        <CentralPackageTransitivePinningEnabled>true</CentralPackageTransitivePinningEnabled>
         <UseArtifactsOutput>true</UseArtifactsOutput>
     </PropertyGroup>
 

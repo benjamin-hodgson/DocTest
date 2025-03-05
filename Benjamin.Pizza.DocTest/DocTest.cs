@@ -30,9 +30,20 @@ public class DocTest
     /// <param name="preamble">Code to prepend to the <paramref name="code"/>.</param>
     public DocTest(string name, string code, Script preamble)
     {
-        ArgumentNullException.ThrowIfNull(name);
-        ArgumentNullException.ThrowIfNull(code);
-        ArgumentNullException.ThrowIfNull(preamble);
+        if (name == null)
+        {
+            throw new ArgumentNullException(nameof(name));
+        }
+
+        if (code == null)
+        {
+            throw new ArgumentNullException(nameof(code));
+        }
+
+        if (preamble == null)
+        {
+            throw new ArgumentNullException(nameof(preamble));
+        }
 
         _script = preamble.ContinueWith(code);
         _code = code;
@@ -47,41 +58,20 @@ public class DocTest
     /// <returns>A task.</returns>
     public async Task Run()
     {
-        var (output, error) = await RedirectConsole(() => _script.RunAsync()).ConfigureAwait(false);
-        Assert.Equal("", error);
-        Assert.Equal(GetExpected(), SplitLines(output));
+        var redirector = DocTestHelper.RedirectConsole();
+        using (redirector)
+        {
+            await _script.RunAsync().ConfigureAwait(false);
+        }
+
+        Assert.Equal("", redirector.CapturedConsoleError);
+        Assert.Equal(GetExpected(), DocTestHelper.SplitLines(redirector.CapturedConsoleOut));
     }
 
     private IEnumerable<string> GetExpected()
     {
         var match = _outputRegex.Match(_code);
-        return SplitLines(_code[(match.Index + match.Length)..])
+        return DocTestHelper.SplitLines(_code.Substring(match.Index + match.Length))
             .Select(line => _commentRegex.Replace(line, ""));
     }
-
-    private static async Task<(string Output, string Error)> RedirectConsole(Func<Task> action)
-    {
-        using var outBuffer = new StringWriter();
-        using var errBuffer = new StringWriter();
-        var oldConsoleOut = Console.Out;
-        var oldConsoleErr = Console.Error;
-        Console.SetOut(outBuffer);
-        Console.SetError(errBuffer);
-        try
-        {
-            await action().ConfigureAwait(false);
-        }
-        finally
-        {
-            Console.SetOut(oldConsoleOut);
-            Console.SetError(oldConsoleErr);
-        }
-
-        return (outBuffer.ToString(), errBuffer.ToString());
-    }
-
-    private static readonly string[] _newlines = { "\r\n", "\n" };
-
-    private static string[] SplitLines(string str)
-        => str.Split(_newlines, StringSplitOptions.None);
 }

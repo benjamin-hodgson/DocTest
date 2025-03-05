@@ -7,6 +7,7 @@
     </PropertyGroup>
 
     <ItemGroup>
+        <PackageReference Include="Microsoft.CodeAnalysis.CSharp.SourceGenerators.Testing" />
         <PackageReference Include="Microsoft.NET.Test.Sdk" />
         <PackageReference Include="Microsoft.Testing.Extensions.CodeCoverage" />
         <PackageReference Include="Microsoft.Testing.Extensions.TrxReport" />
@@ -15,6 +16,10 @@
 
     <ItemGroup>
         <ProjectReference Include="..\Benjamin.Pizza.DocTest\Benjamin.Pizza.DocTest.csproj" />
+        <ProjectReference Include="..\Benjamin.Pizza.DocTest.SourceGenerator\Benjamin.Pizza.DocTest.SourceGenerator.csproj">
+            <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+        </ProjectReference>
+        <ProjectReference Include="..\Benjamin.Pizza.DocTest.TestProject\Benjamin.Pizza.DocTest.TestProject.csproj" />
     </ItemGroup>
 
 </Project>

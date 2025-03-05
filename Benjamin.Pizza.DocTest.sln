@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Benjamin.Pizza.DocTest.Test
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Benjamin.Pizza.DocTest.Docs", "Benjamin.Pizza.DocTest.Docs\Benjamin.Pizza.DocTest.Docs.proj", "{BC2D7FD4-A949-4236-8A63-A69FD0BBDB63}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Benjamin.Pizza.DocTest.TestProject", "Benjamin.Pizza.DocTest.TestProject\Benjamin.Pizza.DocTest.TestProject.csproj", "{D57B6576-722C-42EA-BC60-B81BF5A3A682}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Benjamin.Pizza.DocTest.SourceGenerator", "Benjamin.Pizza.DocTest.SourceGenerator\Benjamin.Pizza.DocTest.SourceGenerator.csproj", "{0F8E830E-AB1E-4BED-8BD6-02AA9B24233B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,5 +34,13 @@ Global
 		{BC2D7FD4-A949-4236-8A63-A69FD0BBDB63}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BC2D7FD4-A949-4236-8A63-A69FD0BBDB63}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BC2D7FD4-A949-4236-8A63-A69FD0BBDB63}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D57B6576-722C-42EA-BC60-B81BF5A3A682}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D57B6576-722C-42EA-BC60-B81BF5A3A682}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D57B6576-722C-42EA-BC60-B81BF5A3A682}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D57B6576-722C-42EA-BC60-B81BF5A3A682}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F8E830E-AB1E-4BED-8BD6-02AA9B24233B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F8E830E-AB1E-4BED-8BD6-02AA9B24233B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F8E830E-AB1E-4BED-8BD6-02AA9B24233B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F8E830E-AB1E-4BED-8BD6-02AA9B24233B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

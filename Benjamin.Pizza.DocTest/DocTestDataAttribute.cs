@@ -37,13 +37,14 @@ public sealed class DocTestDataAttribute : DataAttribute
         MethodInfo testMethod,
         DisposalTracker disposalTracker)
     {
+        await Task.CompletedTask;
         var assembly = TypeInAssemblyToDoctest.Assembly;
 
         var options = ScriptOptions.Default.AddReferences(assembly).AddImports("System");
         var script = CSharpScript.Create(Preamble ?? "", options);
 
         var path = Path.ChangeExtension(assembly.Location, "xml");
-        var xml = XDocument.Parse(await File.ReadAllTextAsync(path).ConfigureAwait(false));
+        var xml = XDocument.Parse(File.ReadAllText(path));
         return (
             from mem in xml.Descendants()
             where mem.Name == "member"
