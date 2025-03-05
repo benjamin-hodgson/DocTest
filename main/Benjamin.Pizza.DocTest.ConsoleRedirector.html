@@ -3,10 +3,10 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Class DocTest
+        <title>Class ConsoleRedirector
  | Benjamin.Pizza.DocTest </title>
         <meta name="viewport" content="width=device-width">
-        <meta name="title" content="Class DocTest
+        <meta name="title" content="Class ConsoleRedirector
  | Benjamin.Pizza.DocTest ">
         <meta name="generator" content="docfx ">
 
@@ -49,10 +49,10 @@
                                             <a href="Benjamin.Pizza.DocTest.html" title="Benjamin.Pizza.DocTest" class="active active-i">Benjamin.Pizza.DocTest</a>
                                             <ul id="toc0_0" class="active active-i">
                                                     <li>
-                                                            <a href="Benjamin.Pizza.DocTest.ConsoleRedirector.html" title="ConsoleRedirector" class="">ConsoleRedirector</a>
+                                                            <a href="Benjamin.Pizza.DocTest.ConsoleRedirector.html" title="ConsoleRedirector" class="active active-i">ConsoleRedirector</a>
                                                     </li>
                                                     <li>
-                                                            <a href="Benjamin.Pizza.DocTest.DocTest.html" title="DocTest" class="active active-i">DocTest</a>
+                                                            <a href="Benjamin.Pizza.DocTest.DocTest.html" title="DocTest" class="">DocTest</a>
                                                     </li>
                                                     <li>
                                                             <a href="Benjamin.Pizza.DocTest.DocTestAttribute.html" title="DocTestAttribute" class="">DocTestAttribute</a>
@@ -71,14 +71,18 @@
 
             <div class="col columns">
 <article class="col">
-        <h1 id="Benjamin_Pizza_DocTest_DocTest"><a href="#Benjamin_Pizza_DocTest_DocTest">Class DocTest
+        <h1 id="Benjamin_Pizza_DocTest_ConsoleRedirector"><a href="#Benjamin_Pizza_DocTest_ConsoleRedirector">Class ConsoleRedirector
 </a></h1>
-        <div><p>A doctest.</p>
+        <div><p>Captures the console for the duration of a test.</p>
 </div>
             <h5>Inheritance</h5>
             <ul>
                     <li><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></li>
-                <li>DocTest</li>
+                <li>ConsoleRedirector</li>
+            </ul>
+            <h5>Implements</h5>
+            <ul>
+                    <li><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></li>
             </ul>
 
             <h5>Inherited Members</h5>
@@ -87,7 +91,7 @@
                             <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
                     </li>
                     <li>
-                            <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+                            <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
                     </li>
                     <li>
                             <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
@@ -104,53 +108,37 @@
             </ul>
 
         <h5>Declaration</h5>
-        <pre><code class="lang- hljs">public class DocTest</code></pre>
+        <pre><code class="lang- hljs">public sealed class ConsoleRedirector : IDisposable</code></pre>
 
 
-            <h5><strong>Examples</strong></h5>
-    <pre><code class="lang-csharp">Console.WriteLine("Hello world");
-// Output:
-// Hello world</code></pre>
 
-
-            <h3 id="constructors"><a href="#constructors">Constructors
+            <h3 id="properties"><a href="#properties">Properties
 </a></h3>
 
         
-                <a id="Benjamin_Pizza_DocTest_DocTest__ctor_"></a>
-                <h4 id="Benjamin_Pizza_DocTest_DocTest__ctor_System_String_System_String_Microsoft_CodeAnalysis_Scripting_Script_"><a href="#Benjamin_Pizza_DocTest_DocTest__ctor_System_String_System_String_Microsoft_CodeAnalysis_Scripting_Script_">DocTest(string, string, Script)</a></h4>
-                <div><p>Constructor.</p>
+                <a id="Benjamin_Pizza_DocTest_ConsoleRedirector_CapturedConsoleError_"></a>
+                <h4 id="Benjamin_Pizza_DocTest_ConsoleRedirector_CapturedConsoleError"><a href="#Benjamin_Pizza_DocTest_ConsoleRedirector_CapturedConsoleError">CapturedConsoleError</a></h4>
+                <div><p>The text that was written to <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.console.error">Error</a>.</p>
 </div>
                 <h5>Declaration</h5>
-                    <pre><code class="lang- hljs">public DocTest(string name, string code, Script preamble)</code></pre>
+                    <pre><code class="lang- hljs">public string CapturedConsoleError { get; }</code></pre>
 
-                        <h5>Parameters</h5>
+
+
+
+
+                        <h5>Property Value</h5>
                         <table>
                             <thead>
                                 <tr>
                                     <th>Type</th>
-                                    <th>Name</th>
                                     <th>Description</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
                                     <td><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></p></td>
-                                    <td><p>name</p></td>
-                                    <td><p>The name of the test.</p>
-</td>
-                                </tr>
-                                <tr>
-                                    <td><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></p></td>
-                                    <td><p>code</p></td>
-                                    <td><p>The test's code.</p>
-</td>
-                                </tr>
-                                <tr>
-                                    <td><p><span class="xref">Script</span></p></td>
-                                    <td><p>preamble</p></td>
-                                    <td><p>Code to prepend to the <code class="paramref">code</code>.</p>
-</td>
+                                    <td></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -158,6 +146,35 @@
 
 
 
+                
+
+        
+                <a id="Benjamin_Pizza_DocTest_ConsoleRedirector_CapturedConsoleOut_"></a>
+                <h4 id="Benjamin_Pizza_DocTest_ConsoleRedirector_CapturedConsoleOut"><a href="#Benjamin_Pizza_DocTest_ConsoleRedirector_CapturedConsoleOut">CapturedConsoleOut</a></h4>
+                <div><p>The text that was written to <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.console.out">Out</a>.</p>
+</div>
+                <h5>Declaration</h5>
+                    <pre><code class="lang- hljs">public string CapturedConsoleOut { get; }</code></pre>
+
+
+
+
+
+                        <h5>Property Value</h5>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Type</th>
+                                    <th>Description</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></p></td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
 
 
 
@@ -168,30 +185,14 @@
 </a></h3>
 
         
-                <a id="Benjamin_Pizza_DocTest_DocTest_Run_"></a>
-                <h4 id="Benjamin_Pizza_DocTest_DocTest_Run"><a href="#Benjamin_Pizza_DocTest_DocTest_Run">Run()</a></h4>
-                <div><p>Run the test.</p>
+                <a id="Benjamin_Pizza_DocTest_ConsoleRedirector_Dispose_"></a>
+                <h4 id="Benjamin_Pizza_DocTest_ConsoleRedirector_Dispose"><a href="#Benjamin_Pizza_DocTest_ConsoleRedirector_Dispose">Dispose()</a></h4>
+                <div><p>Put the console back how it was.</p>
 </div>
                 <h5>Declaration</h5>
-                    <pre><code class="lang- hljs">public Task Run()</code></pre>
+                    <pre><code class="lang- hljs">public void Dispose()</code></pre>
 
 
-                        <h5>Returns</h5>
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>Type</th>
-                                    <th>Description</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></p></td>
-                                    <td><p>A task.</p>
-</td>
-                                </tr>
-                            </tbody>
-                        </table>
 
 
 
@@ -201,43 +202,11 @@
 
                 
 
-        
-                <a id="Benjamin_Pizza_DocTest_DocTest_ToString_"></a>
-                <h4 id="Benjamin_Pizza_DocTest_DocTest_ToString"><a href="#Benjamin_Pizza_DocTest_DocTest_ToString">ToString()</a></h4>
-                <div><p>ToString.</p>
-</div>
-                <h5>Declaration</h5>
-                    <pre><code class="lang- hljs">public override string ToString()</code></pre>
 
-
-                        <h5>Returns</h5>
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>Type</th>
-                                    <th>Description</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></p></td>
-                                    <td><p>A string.</p>
-</td>
-                                </tr>
-                            </tbody>
-                        </table>
-
-
-
-
-
-                    <h5>Overrides</h5>
-                    <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a></div>
-
-
-                
-
-
+        <h3 id="implements"><a href="#implements">Implements</a></h3>
+        <div>
+                <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a>
+        </div>
 
 
 
@@ -249,15 +218,16 @@
     <nav id="local-toc">
         <ul class="active">
             <li>
-                <a class="active" href="#Benjamin_Pizza_DocTest_DocTest">Class DocTest
+                <a class="active" href="#Benjamin_Pizza_DocTest_ConsoleRedirector">Class ConsoleRedirector
 </a>
                 <ul class="active">
                         <li>
-                            <a href="#constructors">Constructors
+                            <a href="#properties">Properties
 </a>
 
                             <ul>
-                                    <li><a href="#Benjamin_Pizza_DocTest_DocTest__ctor_System_String_System_String_Microsoft_CodeAnalysis_Scripting_Script_">DocTest(string, string, Script)</a></li>
+                                    <li><a href="#Benjamin_Pizza_DocTest_ConsoleRedirector_CapturedConsoleError">CapturedConsoleError</a></li>
+                                    <li><a href="#Benjamin_Pizza_DocTest_ConsoleRedirector_CapturedConsoleOut">CapturedConsoleOut</a></li>
                             </ul>
                         </li>
                         <li>
@@ -265,8 +235,7 @@
 </a>
 
                             <ul>
-                                    <li><a href="#Benjamin_Pizza_DocTest_DocTest_Run">Run()</a></li>
-                                    <li><a href="#Benjamin_Pizza_DocTest_DocTest_ToString">ToString()</a></li>
+                                    <li><a href="#Benjamin_Pizza_DocTest_ConsoleRedirector_Dispose">Dispose()</a></li>
                             </ul>
                         </li>
                 </ul>

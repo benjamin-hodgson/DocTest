@@ -7,6 +7,48 @@ references:
   commentId: N:Benjamin.Pizza.DocTest
   fullName: Benjamin.Pizza.DocTest
   nameWithType: Benjamin.Pizza.DocTest
+- uid: Benjamin.Pizza.DocTest.ConsoleRedirector
+  name: ConsoleRedirector
+  href: Benjamin.Pizza.DocTest.ConsoleRedirector.html
+  commentId: T:Benjamin.Pizza.DocTest.ConsoleRedirector
+  fullName: Benjamin.Pizza.DocTest.ConsoleRedirector
+  nameWithType: ConsoleRedirector
+- uid: Benjamin.Pizza.DocTest.ConsoleRedirector.CapturedConsoleError
+  name: CapturedConsoleError
+  href: Benjamin.Pizza.DocTest.ConsoleRedirector.html#Benjamin_Pizza_DocTest_ConsoleRedirector_CapturedConsoleError
+  commentId: P:Benjamin.Pizza.DocTest.ConsoleRedirector.CapturedConsoleError
+  fullName: Benjamin.Pizza.DocTest.ConsoleRedirector.CapturedConsoleError
+  nameWithType: ConsoleRedirector.CapturedConsoleError
+- uid: Benjamin.Pizza.DocTest.ConsoleRedirector.CapturedConsoleError*
+  name: CapturedConsoleError
+  href: Benjamin.Pizza.DocTest.ConsoleRedirector.html#Benjamin_Pizza_DocTest_ConsoleRedirector_CapturedConsoleError_
+  commentId: Overload:Benjamin.Pizza.DocTest.ConsoleRedirector.CapturedConsoleError
+  fullName: Benjamin.Pizza.DocTest.ConsoleRedirector.CapturedConsoleError
+  nameWithType: ConsoleRedirector.CapturedConsoleError
+- uid: Benjamin.Pizza.DocTest.ConsoleRedirector.CapturedConsoleOut
+  name: CapturedConsoleOut
+  href: Benjamin.Pizza.DocTest.ConsoleRedirector.html#Benjamin_Pizza_DocTest_ConsoleRedirector_CapturedConsoleOut
+  commentId: P:Benjamin.Pizza.DocTest.ConsoleRedirector.CapturedConsoleOut
+  fullName: Benjamin.Pizza.DocTest.ConsoleRedirector.CapturedConsoleOut
+  nameWithType: ConsoleRedirector.CapturedConsoleOut
+- uid: Benjamin.Pizza.DocTest.ConsoleRedirector.CapturedConsoleOut*
+  name: CapturedConsoleOut
+  href: Benjamin.Pizza.DocTest.ConsoleRedirector.html#Benjamin_Pizza_DocTest_ConsoleRedirector_CapturedConsoleOut_
+  commentId: Overload:Benjamin.Pizza.DocTest.ConsoleRedirector.CapturedConsoleOut
+  fullName: Benjamin.Pizza.DocTest.ConsoleRedirector.CapturedConsoleOut
+  nameWithType: ConsoleRedirector.CapturedConsoleOut
+- uid: Benjamin.Pizza.DocTest.ConsoleRedirector.Dispose
+  name: Dispose()
+  href: Benjamin.Pizza.DocTest.ConsoleRedirector.html#Benjamin_Pizza_DocTest_ConsoleRedirector_Dispose
+  commentId: M:Benjamin.Pizza.DocTest.ConsoleRedirector.Dispose
+  fullName: Benjamin.Pizza.DocTest.ConsoleRedirector.Dispose()
+  nameWithType: ConsoleRedirector.Dispose()
+- uid: Benjamin.Pizza.DocTest.ConsoleRedirector.Dispose*
+  name: Dispose
+  href: Benjamin.Pizza.DocTest.ConsoleRedirector.html#Benjamin_Pizza_DocTest_ConsoleRedirector_Dispose_
+  commentId: Overload:Benjamin.Pizza.DocTest.ConsoleRedirector.Dispose
+  fullName: Benjamin.Pizza.DocTest.ConsoleRedirector.Dispose
+  nameWithType: ConsoleRedirector.Dispose
 - uid: Benjamin.Pizza.DocTest.DocTest
   name: DocTest
   href: Benjamin.Pizza.DocTest.DocTest.html
@@ -55,6 +97,42 @@ references:
   commentId: Overload:Benjamin.Pizza.DocTest.DocTest.ToString
   fullName: Benjamin.Pizza.DocTest.DocTest.ToString
   nameWithType: DocTest.ToString
+- uid: Benjamin.Pizza.DocTest.DocTestAttribute
+  name: DocTestAttribute
+  href: Benjamin.Pizza.DocTest.DocTestAttribute.html
+  commentId: T:Benjamin.Pizza.DocTest.DocTestAttribute
+  fullName: Benjamin.Pizza.DocTest.DocTestAttribute
+  nameWithType: DocTestAttribute
+- uid: Benjamin.Pizza.DocTest.DocTestAttribute.#ctor(System.Type)
+  name: DocTestAttribute(Type)
+  href: Benjamin.Pizza.DocTest.DocTestAttribute.html#Benjamin_Pizza_DocTest_DocTestAttribute__ctor_System_Type_
+  commentId: M:Benjamin.Pizza.DocTest.DocTestAttribute.#ctor(System.Type)
+  name.vb: New(Type)
+  fullName: Benjamin.Pizza.DocTest.DocTestAttribute.DocTestAttribute(System.Type)
+  fullName.vb: Benjamin.Pizza.DocTest.DocTestAttribute.New(System.Type)
+  nameWithType: DocTestAttribute.DocTestAttribute(Type)
+  nameWithType.vb: DocTestAttribute.New(Type)
+- uid: Benjamin.Pizza.DocTest.DocTestAttribute.#ctor*
+  name: DocTestAttribute
+  href: Benjamin.Pizza.DocTest.DocTestAttribute.html#Benjamin_Pizza_DocTest_DocTestAttribute__ctor_
+  commentId: Overload:Benjamin.Pizza.DocTest.DocTestAttribute.#ctor
+  name.vb: New
+  fullName: Benjamin.Pizza.DocTest.DocTestAttribute.DocTestAttribute
+  fullName.vb: Benjamin.Pizza.DocTest.DocTestAttribute.New
+  nameWithType: DocTestAttribute.DocTestAttribute
+  nameWithType.vb: DocTestAttribute.New
+- uid: Benjamin.Pizza.DocTest.DocTestAttribute.TypeInAssemblyToDoctest
+  name: TypeInAssemblyToDoctest
+  href: Benjamin.Pizza.DocTest.DocTestAttribute.html#Benjamin_Pizza_DocTest_DocTestAttribute_TypeInAssemblyToDoctest
+  commentId: P:Benjamin.Pizza.DocTest.DocTestAttribute.TypeInAssemblyToDoctest
+  fullName: Benjamin.Pizza.DocTest.DocTestAttribute.TypeInAssemblyToDoctest
+  nameWithType: DocTestAttribute.TypeInAssemblyToDoctest
+- uid: Benjamin.Pizza.DocTest.DocTestAttribute.TypeInAssemblyToDoctest*
+  name: TypeInAssemblyToDoctest
+  href: Benjamin.Pizza.DocTest.DocTestAttribute.html#Benjamin_Pizza_DocTest_DocTestAttribute_TypeInAssemblyToDoctest_
+  commentId: Overload:Benjamin.Pizza.DocTest.DocTestAttribute.TypeInAssemblyToDoctest
+  fullName: Benjamin.Pizza.DocTest.DocTestAttribute.TypeInAssemblyToDoctest
+  nameWithType: DocTestAttribute.TypeInAssemblyToDoctest
 - uid: Benjamin.Pizza.DocTest.DocTestDataAttribute
   name: DocTestDataAttribute
   href: Benjamin.Pizza.DocTest.DocTestDataAttribute.html
@@ -127,3 +205,36 @@ references:
   commentId: Overload:Benjamin.Pizza.DocTest.DocTestDataAttribute.TypeInAssemblyToDoctest
   fullName: Benjamin.Pizza.DocTest.DocTestDataAttribute.TypeInAssemblyToDoctest
   nameWithType: DocTestDataAttribute.TypeInAssemblyToDoctest
+- uid: Benjamin.Pizza.DocTest.DocTestHelper
+  name: DocTestHelper
+  href: Benjamin.Pizza.DocTest.DocTestHelper.html
+  commentId: T:Benjamin.Pizza.DocTest.DocTestHelper
+  fullName: Benjamin.Pizza.DocTest.DocTestHelper
+  nameWithType: DocTestHelper
+- uid: Benjamin.Pizza.DocTest.DocTestHelper.RedirectConsole
+  name: RedirectConsole()
+  href: Benjamin.Pizza.DocTest.DocTestHelper.html#Benjamin_Pizza_DocTest_DocTestHelper_RedirectConsole
+  commentId: M:Benjamin.Pizza.DocTest.DocTestHelper.RedirectConsole
+  fullName: Benjamin.Pizza.DocTest.DocTestHelper.RedirectConsole()
+  nameWithType: DocTestHelper.RedirectConsole()
+- uid: Benjamin.Pizza.DocTest.DocTestHelper.RedirectConsole*
+  name: RedirectConsole
+  href: Benjamin.Pizza.DocTest.DocTestHelper.html#Benjamin_Pizza_DocTest_DocTestHelper_RedirectConsole_
+  commentId: Overload:Benjamin.Pizza.DocTest.DocTestHelper.RedirectConsole
+  fullName: Benjamin.Pizza.DocTest.DocTestHelper.RedirectConsole
+  nameWithType: DocTestHelper.RedirectConsole
+- uid: Benjamin.Pizza.DocTest.DocTestHelper.SplitLines(System.String)
+  name: SplitLines(string)
+  href: Benjamin.Pizza.DocTest.DocTestHelper.html#Benjamin_Pizza_DocTest_DocTestHelper_SplitLines_System_String_
+  commentId: M:Benjamin.Pizza.DocTest.DocTestHelper.SplitLines(System.String)
+  name.vb: SplitLines(String)
+  fullName: Benjamin.Pizza.DocTest.DocTestHelper.SplitLines(string)
+  fullName.vb: Benjamin.Pizza.DocTest.DocTestHelper.SplitLines(String)
+  nameWithType: DocTestHelper.SplitLines(string)
+  nameWithType.vb: DocTestHelper.SplitLines(String)
+- uid: Benjamin.Pizza.DocTest.DocTestHelper.SplitLines*
+  name: SplitLines
+  href: Benjamin.Pizza.DocTest.DocTestHelper.html#Benjamin_Pizza_DocTest_DocTestHelper_SplitLines_
+  commentId: Overload:Benjamin.Pizza.DocTest.DocTestHelper.SplitLines
+  fullName: Benjamin.Pizza.DocTest.DocTestHelper.SplitLines
+  nameWithType: DocTestHelper.SplitLines
