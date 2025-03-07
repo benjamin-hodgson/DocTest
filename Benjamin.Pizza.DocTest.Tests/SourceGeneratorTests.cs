@@ -9,7 +9,7 @@ using Xunit;
 
 namespace Benjamin.Pizza.DocTest.Tests;
 
-public class DocTestTests
+public class SourceGeneratorTests
 {
     [Fact]
     public async Task TestSourceGenerator()
