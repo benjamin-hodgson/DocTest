@@ -32,7 +32,7 @@ public class SourceGeneratorTests
             }
             """;
 
-        foreach (var t in GetInjectedSources())
+        foreach (var t in ExpectedInjectedSources())
         {
             test.TestState.GeneratedSources.Add(t);
         }
@@ -109,7 +109,7 @@ public class SourceGeneratorTests
         global using System.Threading.Tasks;
         """;
 
-    private static IEnumerable<(Type SourceGeneratorType, string Filename, string Content)> GetInjectedSources()
+    private static IEnumerable<(Type SourceGeneratorType, string Filename, string Content)> ExpectedInjectedSources()
     {
         yield return (
             typeof(DocTestSourceGenerator),
