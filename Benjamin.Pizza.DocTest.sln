@@ -3,15 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30114.105
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Benjamin.Pizza.DocTest", "Benjamin.Pizza.DocTest\Benjamin.Pizza.DocTest.csproj", "{EEE6C082-FC93-4A61-A212-4FBAB0D6500B}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Benjamin.Pizza.DocTest.Tests", "Benjamin.Pizza.DocTest.Tests\Benjamin.Pizza.DocTest.Tests.csproj", "{1C06AA63-F035-4A8B-BE15-19383F4F5133}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Benjamin.Pizza.DocTest.Docs", "Benjamin.Pizza.DocTest.Docs\Benjamin.Pizza.DocTest.Docs.proj", "{BC2D7FD4-A949-4236-8A63-A69FD0BBDB63}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Benjamin.Pizza.DocTest.TestProject", "Benjamin.Pizza.DocTest.TestProject\Benjamin.Pizza.DocTest.TestProject.csproj", "{D57B6576-722C-42EA-BC60-B81BF5A3A682}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Benjamin.Pizza.DocTest.SourceGenerator", "Benjamin.Pizza.DocTest.SourceGenerator\Benjamin.Pizza.DocTest.SourceGenerator.csproj", "{0F8E830E-AB1E-4BED-8BD6-02AA9B24233B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Benjamin.Pizza.DocTest", "Benjamin.Pizza.DocTest\Benjamin.Pizza.DocTest.csproj", "{0F8E830E-AB1E-4BED-8BD6-02AA9B24233B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -22,10 +20,6 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{EEE6C082-FC93-4A61-A212-4FBAB0D6500B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EEE6C082-FC93-4A61-A212-4FBAB0D6500B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EEE6C082-FC93-4A61-A212-4FBAB0D6500B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{EEE6C082-FC93-4A61-A212-4FBAB0D6500B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{1C06AA63-F035-4A8B-BE15-19383F4F5133}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{1C06AA63-F035-4A8B-BE15-19383F4F5133}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1C06AA63-F035-4A8B-BE15-19383F4F5133}.Release|Any CPU.ActiveCfg = Release|Any CPU

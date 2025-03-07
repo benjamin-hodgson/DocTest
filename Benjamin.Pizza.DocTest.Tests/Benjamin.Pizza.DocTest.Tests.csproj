@@ -15,8 +15,7 @@
     </ItemGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\Benjamin.Pizza.DocTest\Benjamin.Pizza.DocTest.csproj" />
-        <ProjectReference Include="..\Benjamin.Pizza.DocTest.SourceGenerator\Benjamin.Pizza.DocTest.SourceGenerator.csproj">
+        <ProjectReference Include="..\Benjamin.Pizza.DocTest\Benjamin.Pizza.DocTest.csproj">
             <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
         </ProjectReference>
         <ProjectReference Include="..\Benjamin.Pizza.DocTest.TestProject\Benjamin.Pizza.DocTest.TestProject.csproj" />
