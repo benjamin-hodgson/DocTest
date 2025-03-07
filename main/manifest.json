@@ -12,60 +12,20 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "Benjamin.Pizza.DocTest.ConsoleRedirector.yml",
+      "source_relative_path": "Benjamin.Pizza.DocTest.SourceGenerator.DocTestSourceGenerator.yml",
       "output": {
         ".html": {
-          "relative_path": "Benjamin.Pizza.DocTest.ConsoleRedirector.html"
+          "relative_path": "Benjamin.Pizza.DocTest.SourceGenerator.DocTestSourceGenerator.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "Benjamin.Pizza.DocTest.DocTest.yml",
+      "source_relative_path": "Benjamin.Pizza.DocTest.SourceGenerator.yml",
       "output": {
         ".html": {
-          "relative_path": "Benjamin.Pizza.DocTest.DocTest.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "Benjamin.Pizza.DocTest.DocTestAttribute.yml",
-      "output": {
-        ".html": {
-          "relative_path": "Benjamin.Pizza.DocTest.DocTestAttribute.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "Benjamin.Pizza.DocTest.DocTestDataAttribute.yml",
-      "output": {
-        ".html": {
-          "relative_path": "Benjamin.Pizza.DocTest.DocTestDataAttribute.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "Benjamin.Pizza.DocTest.DocTestHelper.yml",
-      "output": {
-        ".html": {
-          "relative_path": "Benjamin.Pizza.DocTest.DocTestHelper.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "Benjamin.Pizza.DocTest.yml",
-      "output": {
-        ".html": {
-          "relative_path": "Benjamin.Pizza.DocTest.html"
+          "relative_path": "Benjamin.Pizza.DocTest.SourceGenerator.html"
         }
       },
       "version": ""

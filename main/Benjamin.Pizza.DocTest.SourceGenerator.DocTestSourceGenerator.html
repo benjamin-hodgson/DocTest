@@ -3,10 +3,10 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Class DocTestHelper
+        <title>Class DocTestSourceGenerator
  | Benjamin.Pizza.DocTest </title>
         <meta name="viewport" content="width=device-width">
-        <meta name="title" content="Class DocTestHelper
+        <meta name="title" content="Class DocTestSourceGenerator
  | Benjamin.Pizza.DocTest ">
         <meta name="generator" content="docfx ">
 
@@ -46,22 +46,10 @@
                             <ul id="toc0" class="active active-i">
                                     <li>
                                             <button type="button" class="link expander active active-i js-expander" aria-controls="toc0_0"></button>
-                                            <a href="Benjamin.Pizza.DocTest.html" title="Benjamin.Pizza.DocTest" class="active active-i">Benjamin.Pizza.DocTest</a>
+                                            <a href="Benjamin.Pizza.DocTest.SourceGenerator.html" title="Benjamin.Pizza.DocTest.SourceGenerator" class="active active-i">Benjamin.Pizza.DocTest.SourceGenerator</a>
                                             <ul id="toc0_0" class="active active-i">
                                                     <li>
-                                                            <a href="Benjamin.Pizza.DocTest.ConsoleRedirector.html" title="ConsoleRedirector" class="">ConsoleRedirector</a>
-                                                    </li>
-                                                    <li>
-                                                            <a href="Benjamin.Pizza.DocTest.DocTest.html" title="DocTest" class="">DocTest</a>
-                                                    </li>
-                                                    <li>
-                                                            <a href="Benjamin.Pizza.DocTest.DocTestAttribute.html" title="DocTestAttribute" class="">DocTestAttribute</a>
-                                                    </li>
-                                                    <li>
-                                                            <a href="Benjamin.Pizza.DocTest.DocTestDataAttribute.html" title="DocTestDataAttribute" class="">DocTestDataAttribute</a>
-                                                    </li>
-                                                    <li>
-                                                            <a href="Benjamin.Pizza.DocTest.DocTestHelper.html" title="DocTestHelper" class="active active-i">DocTestHelper</a>
+                                                            <a href="Benjamin.Pizza.DocTest.SourceGenerator.DocTestSourceGenerator.html" title="DocTestSourceGenerator" class="active active-i">DocTestSourceGenerator</a>
                                                     </li>
                                             </ul>
                                     </li>
@@ -71,14 +59,18 @@
 
             <div class="col columns">
 <article class="col">
-        <h1 id="Benjamin_Pizza_DocTest_DocTestHelper"><a href="#Benjamin_Pizza_DocTest_DocTestHelper">Class DocTestHelper
+        <h1 id="Benjamin_Pizza_DocTest_SourceGenerator_DocTestSourceGenerator"><a href="#Benjamin_Pizza_DocTest_SourceGenerator_DocTestSourceGenerator">Class DocTestSourceGenerator
 </a></h1>
-        <div><p>Helper functions to be called from doctests.</p>
+        <div><p>Source generator for doctests.</p>
 </div>
             <h5>Inheritance</h5>
             <ul>
                     <li><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></li>
-                <li>DocTestHelper</li>
+                <li>DocTestSourceGenerator</li>
+            </ul>
+            <h5>Implements</h5>
+            <ul>
+                    <li><span class="xref">IIncrementalGenerator</span></li>
             </ul>
 
             <h5>Inherited Members</h5>
@@ -107,38 +99,22 @@
             </ul>
 
         <h5>Declaration</h5>
-        <pre><code class="lang- hljs">public static class DocTestHelper</code></pre>
+        <pre><code class="lang- hljs">public class DocTestSourceGenerator : IIncrementalGenerator</code></pre>
 
 
 
-            <h3 id="methods"><a href="#methods">Methods
+            <h3 id="constructors"><a href="#constructors">Constructors
 </a></h3>
 
         
-                <a id="Benjamin_Pizza_DocTest_DocTestHelper_RedirectConsole_"></a>
-                <h4 id="Benjamin_Pizza_DocTest_DocTestHelper_RedirectConsole"><a href="#Benjamin_Pizza_DocTest_DocTestHelper_RedirectConsole">RedirectConsole()</a></h4>
-                <div><p>Redirect the console for the duration of the test.</p>
+                <a id="Benjamin_Pizza_DocTest_SourceGenerator_DocTestSourceGenerator__ctor_"></a>
+                <h4 id="Benjamin_Pizza_DocTest_SourceGenerator_DocTestSourceGenerator__ctor"><a href="#Benjamin_Pizza_DocTest_SourceGenerator_DocTestSourceGenerator__ctor">DocTestSourceGenerator()</a></h4>
+                <div><p>Source generator for doctests.</p>
 </div>
                 <h5>Declaration</h5>
-                    <pre><code class="lang- hljs">public static ConsoleRedirector RedirectConsole()</code></pre>
+                    <pre><code class="lang- hljs">public DocTestSourceGenerator()</code></pre>
 
 
-                        <h5>Returns</h5>
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>Type</th>
-                                    <th>Description</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td><p><a class="xref" href="Benjamin.Pizza.DocTest.ConsoleRedirector.html">ConsoleRedirector</a></p></td>
-                                    <td><p>An <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a>.</p>
-</td>
-                                </tr>
-                            </tbody>
-                        </table>
 
 
 
@@ -148,13 +124,16 @@
 
                 
 
+            <h3 id="methods"><a href="#methods">Methods
+</a></h3>
+
         
-                <a id="Benjamin_Pizza_DocTest_DocTestHelper_SplitLines_"></a>
-                <h4 id="Benjamin_Pizza_DocTest_DocTestHelper_SplitLines_System_String_"><a href="#Benjamin_Pizza_DocTest_DocTestHelper_SplitLines_System_String_">SplitLines(string)</a></h4>
-                <div><p>Split the string at newlines.</p>
+                <a id="Benjamin_Pizza_DocTest_SourceGenerator_DocTestSourceGenerator_Initialize_"></a>
+                <h4 id="Benjamin_Pizza_DocTest_SourceGenerator_DocTestSourceGenerator_Initialize_Microsoft_CodeAnalysis_IncrementalGeneratorInitializationContext_"><a href="#Benjamin_Pizza_DocTest_SourceGenerator_DocTestSourceGenerator_Initialize_Microsoft_CodeAnalysis_IncrementalGeneratorInitializationContext_">Initialize(IncrementalGeneratorInitializationContext)</a></h4>
+                <div><p>Initialise the source generator.</p>
 </div>
                 <h5>Declaration</h5>
-                    <pre><code class="lang- hljs">public static string[] SplitLines(string str)</code></pre>
+                    <pre><code class="lang- hljs">public void Initialize(IncrementalGeneratorInitializationContext context)</code></pre>
 
                         <h5>Parameters</h5>
                         <table>
@@ -167,30 +146,14 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></p></td>
-                                    <td><p>str</p></td>
-                                    <td><p>The string.</p>
+                                    <td><p><span class="xref">IncrementalGeneratorInitializationContext</span></p></td>
+                                    <td><p>context</p></td>
+                                    <td><p>The context.</p>
 </td>
                                 </tr>
                             </tbody>
                         </table>
 
-                        <h5>Returns</h5>
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>Type</th>
-                                    <th>Description</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>[]</p></td>
-                                    <td><p>An array of strings.</p>
-</td>
-                                </tr>
-                            </tbody>
-                        </table>
 
 
 
@@ -201,6 +164,10 @@
                 
 
 
+        <h3 id="implements"><a href="#implements">Implements</a></h3>
+        <div>
+                <span class="xref">Microsoft.CodeAnalysis.IIncrementalGenerator</span>
+        </div>
 
 
 
@@ -212,16 +179,23 @@
     <nav id="local-toc">
         <ul class="active">
             <li>
-                <a class="active" href="#Benjamin_Pizza_DocTest_DocTestHelper">Class DocTestHelper
+                <a class="active" href="#Benjamin_Pizza_DocTest_SourceGenerator_DocTestSourceGenerator">Class DocTestSourceGenerator
 </a>
                 <ul class="active">
+                        <li>
+                            <a href="#constructors">Constructors
+</a>
+
+                            <ul>
+                                    <li><a href="#Benjamin_Pizza_DocTest_SourceGenerator_DocTestSourceGenerator__ctor">DocTestSourceGenerator()</a></li>
+                            </ul>
+                        </li>
                         <li>
                             <a href="#methods">Methods
 </a>
 
                             <ul>
-                                    <li><a href="#Benjamin_Pizza_DocTest_DocTestHelper_RedirectConsole">RedirectConsole()</a></li>
-                                    <li><a href="#Benjamin_Pizza_DocTest_DocTestHelper_SplitLines_System_String_">SplitLines(string)</a></li>
+                                    <li><a href="#Benjamin_Pizza_DocTest_SourceGenerator_DocTestSourceGenerator_Initialize_Microsoft_CodeAnalysis_IncrementalGeneratorInitializationContext_">Initialize(IncrementalGeneratorInitializationContext)</a></li>
                             </ul>
                         </li>
                 </ul>
