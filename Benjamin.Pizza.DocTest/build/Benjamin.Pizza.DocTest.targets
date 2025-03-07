@@ -1,0 +1,22 @@
+<Project>
+
+    <Target
+        Name="AddDocumentationAsAdditionalFilesForDoctest"
+        BeforeTargets="CoreCompile"
+        DependsOnTargets="ResolveAssemblyReferences">
+
+        <MSBuild
+            Projects="@(_MSBuildProjectReferenceExistent)"
+            Targets="DocumentationProjectOutputGroup"
+            BuildInParallel="$(BuildInParallel)"
+            Properties="%(_MSBuildProjectReferenceExistent.SetConfiguration); %(_MSBuildProjectReferenceExistent.SetPlatform);  %(_MSBuildProjectReferenceExistent.SetTargetFramework)"
+            ContinueOnError="$(ContinueOnError)"
+            RemoveProperties="%(_MSBuildProjectReferenceExistent.GlobalPropertiesToRemove)$(_GlobalPropertiesToRemoveFromProjectReferences)">
+
+            <Output TaskParameter="TargetOutputs" ItemName="AdditionalFiles"  />
+
+        </MSBuild>
+
+    </Target>
+
+</Project>
