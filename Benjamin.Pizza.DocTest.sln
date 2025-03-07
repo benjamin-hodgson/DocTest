@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Benjamin.Pizza.DocTest.Test
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Benjamin.Pizza.DocTest", "Benjamin.Pizza.DocTest\Benjamin.Pizza.DocTest.csproj", "{0F8E830E-AB1E-4BED-8BD6-02AA9B24233B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Benjamin.Pizza.DocTest.Tests.Integration", "Benjamin.Pizza.DocTest.Tests.Integration\Benjamin.Pizza.DocTest.Tests.Integration.csproj", "{F33D3B7B-9C74-45F4-92BB-2AD210F324F5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -36,5 +38,9 @@ Global
 		{0F8E830E-AB1E-4BED-8BD6-02AA9B24233B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0F8E830E-AB1E-4BED-8BD6-02AA9B24233B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0F8E830E-AB1E-4BED-8BD6-02AA9B24233B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F33D3B7B-9C74-45F4-92BB-2AD210F324F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F33D3B7B-9C74-45F4-92BB-2AD210F324F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F33D3B7B-9C74-45F4-92BB-2AD210F324F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F33D3B7B-9C74-45F4-92BB-2AD210F324F5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

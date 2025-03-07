@@ -49,12 +49,15 @@ public class SourceGeneratorTests
             using System.Reflection;
             using System.Runtime;
 
-            namespace Tests;
+            namespace Benjamin.Pizza.DocTest.TestProject.Tests;
 
             public partial class MyDocTests
             {
                 [Xunit.Fact]
+                [System.CodeDom.Compiler.GeneratedCode("Benjamin.Pizza.DocTest", "1.0.0")]
+                #pragma warning disable CS1998 // Async method lacks 'await' operators and will run synchronously
                 public static async Task My_example()
+                #pragma warning restore CS1998 // Async method lacks 'await' operators and will run synchronously
                 {
                     var __doctest_redirector = new Benjamin.Pizza.DocTest.ConsoleRedirector();
                     using (__doctest_redirector)

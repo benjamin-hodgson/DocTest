@@ -11,6 +11,7 @@ namespace Benjamin.Pizza.DocTest.SourceGenerator;
 /// <summary>
 /// Source generator for doctests.
 /// </summary>
+[Generator]
 public class DocTestSourceGenerator : IIncrementalGenerator
 {
     private static readonly Regex _outputRegex = new(@"// Output:\s*", RegexOptions.Compiled);
@@ -150,7 +151,6 @@ public class DocTestSourceGenerator : IIncrementalGenerator
                 var cls = ctx.TargetSymbol;
                 var attr = ctx.Attributes.Single();
                 var typeInAssembly = (INamedTypeSymbol)attr.ConstructorArguments.Single().Value!;
-                Console.WriteLine(attr.NamedArguments.SingleOrDefault(a => a.Key == "Usings").Value.Values);
                 var usingsTc = attr.NamedArguments.SingleOrDefault(a => a.Key == "Usings").Value;
                 var usings = usingsTc.Kind == TypedConstantKind.Array && !usingsTc.IsNull
                     ? usingsTc.Values.Select(u => (string?)u.Value ?? "").ToImmutableArray()
@@ -197,7 +197,7 @@ public class DocTestSourceGenerator : IIncrementalGenerator
                 }
 
                 var ns = tup.cls.ContainingNamespace != null
-                    ? $"namespace {tup.cls.ContainingNamespace.Name};"
+                    ? $"namespace {tup.cls.ContainingNamespace.ToDisplayString()};"
                     : "";
 
                 var source = $$"""
@@ -247,7 +247,10 @@ public class DocTestSourceGenerator : IIncrementalGenerator
         var methodName = GetMethodName(name);
         return $$"""
                 [Xunit.Fact]
+                [System.CodeDom.Compiler.GeneratedCode("Benjamin.Pizza.DocTest", "1.0.0")]
+                #pragma warning disable CS1998 // Async method lacks 'await' operators and will run synchronously
                 public static async Task {{methodName}}()
+                #pragma warning restore CS1998 // Async method lacks 'await' operators and will run synchronously
                 {
                     var __doctest_redirector = new Benjamin.Pizza.DocTest.ConsoleRedirector();
                     using (__doctest_redirector)
