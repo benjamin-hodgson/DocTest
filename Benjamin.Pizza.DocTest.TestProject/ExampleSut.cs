@@ -1,7 +1,7 @@
-﻿namespace Benjamin.Pizza.DocTest.TestProject;
+namespace Benjamin.Pizza.DocTest.TestProject;
 
 /// <summary>
-/// My example class.
+/// An example SUT with a doctest.
 /// </summary>
 /// <example name="My example">
 /// <code doctest="true">
@@ -10,6 +10,6 @@
 /// // hello
 /// </code>
 /// </example>
-public class Class1
+public class ExampleSut
 {
 }

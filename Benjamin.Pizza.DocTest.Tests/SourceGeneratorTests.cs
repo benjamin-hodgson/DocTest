@@ -15,49 +15,28 @@ public class SourceGeneratorTests
     public async Task TestSourceGenerator()
     {
         var test = new CSharpSourceGeneratorTest<DocTestSourceGenerator, DefaultVerifier>();
-        test.TestState.AdditionalReferences.Add(MetadataReference.CreateFromFile(typeof(FactAttribute).Assembly.Location));
-        test.TestState.AdditionalReferences.Add(MetadataReference.CreateFromFile(typeof(Assert).Assembly.Location));
-        test.TestState.AdditionalReferences.Add(MetadataReference.CreateFromFile(typeof(Class1).Assembly.Location));
-        test.TestState.AdditionalFiles.Add((
-            typeof(Class1).Assembly.GetName().Name + ".xml",
-            await File.ReadAllTextAsync(typeof(Class1).Assembly.GetName().Name + ".xml", TestContext.Current.CancellationToken)
-        ));
+        test.TestState.AdditionalReferences.AddRange(GetTestReferences());
+        test.TestState.AdditionalFiles.Add(await GetDocumentationXml(typeof(ExampleSut)));
         test.ReferenceAssemblies = ReferenceAssemblies.Net.Net90;
 
-        // https://github.com/dotnet/sdk/blob/3c66f856d197b3735077fff4e4806443d841a09e/src/Tasks/Microsoft.NET.Build.Tasks/targets/Microsoft.NET.Sdk.CSharp.props#L26
-        test.TestState.Sources.Add(
-            """
-            global using System;
-            global using System.Collections.Generic;
-            global using System.IO;
-            global using System.Linq;
-            global using System.Net.Http;
-            global using System.Threading;
-            global using System.Threading.Tasks;
-            """
-        );
+        test.TestState.Sources.Add(GetGlobalUsings());
         test.TestCode = """
             using Benjamin.Pizza.DocTest;
             using Benjamin.Pizza.DocTest.TestProject;
 
             namespace Benjamin.Pizza.DocTest.TestProject.Tests;
 
-            [DocTest(typeof(Class1), Usings = ["System.Reflection", "System.Runtime"])]
+            [DocTest(typeof(ExampleSut), Usings = ["System.Reflection", "System.Runtime"])]
             public partial class MyDocTests
             {
             }
             """;
 
-        test.TestState.GeneratedSources.Add((
-            typeof(DocTestSourceGenerator),
-            "ConsoleRedirector.cs",
-            DocTestSourceGenerator.ConsoleRedirectorSourceCode
-        ));
-        test.TestState.GeneratedSources.Add((
-            typeof(DocTestSourceGenerator),
-            "DocTestAttribute.cs",
-            DocTestSourceGenerator.DocTestAttributeSourceCode
-        ));
+        foreach (var t in GetInjectedSources())
+        {
+            test.TestState.GeneratedSources.Add(t);
+        }
+
         test.TestState.GeneratedSources.Add((
             typeof(DocTestSourceGenerator),
             "MyDocTests.DocTest.g.cs",
@@ -101,5 +80,46 @@ public class SourceGeneratorTests
             """));
 
         await test.RunAsync(TestContext.Current.CancellationToken);
+    }
+
+    private static IEnumerable<MetadataReference> GetTestReferences()
+    {
+        yield return MetadataReference.CreateFromFile(typeof(FactAttribute).Assembly.Location);
+        yield return MetadataReference.CreateFromFile(typeof(Assert).Assembly.Location);
+        yield return MetadataReference.CreateFromFile(typeof(ExampleSut).Assembly.Location);
+    }
+
+    private static async Task<(string Filename, string Content)> GetDocumentationXml(Type typeInAssemblyToDoctest)
+    {
+        var name = typeInAssemblyToDoctest.Assembly.GetName().Name + ".xml";
+        return (
+            name,
+            await File.ReadAllTextAsync(name, TestContext.Current.CancellationToken)
+        );
+    }
+
+    // https://github.com/dotnet/sdk/blob/3c66f856d197b3735077fff4e4806443d841a09e/src/Tasks/Microsoft.NET.Build.Tasks/targets/Microsoft.NET.Sdk.CSharp.props#L26
+    private static string GetGlobalUsings() => """
+        global using System;
+        global using System.Collections.Generic;
+        global using System.IO;
+        global using System.Linq;
+        global using System.Net.Http;
+        global using System.Threading;
+        global using System.Threading.Tasks;
+        """;
+
+    private static IEnumerable<(Type SourceGeneratorType, string Filename, string Content)> GetInjectedSources()
+    {
+        yield return (
+            typeof(DocTestSourceGenerator),
+            "ConsoleRedirector.cs",
+            DocTestSourceGenerator.ConsoleRedirectorSourceCode
+        );
+        yield return (
+            typeof(DocTestSourceGenerator),
+            "DocTestAttribute.cs",
+            DocTestSourceGenerator.DocTestAttributeSourceCode
+        );
     }
 }
