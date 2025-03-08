@@ -5,6 +5,8 @@
         <IncludeBuildOutput>false</IncludeBuildOutput>
         <LangVersion>latest</LangVersion>
         <EnforceExtendedAnalyzerRules>true</EnforceExtendedAnalyzerRules>
+        <!-- no symbols to include - analyser only -->
+        <IncludeSymbols>false</IncludeSymbols>
     </PropertyGroup>
 
     <ItemGroup>
