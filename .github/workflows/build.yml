@@ -26,4 +26,3 @@ jobs:
       TESTPLATFORM: true
     secrets:
       NUGET_KEY: ${{ secrets.NUGET_KEY }}
-      CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
