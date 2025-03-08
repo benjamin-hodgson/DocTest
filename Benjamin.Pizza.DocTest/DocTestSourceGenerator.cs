@@ -16,7 +16,7 @@ public class DocTestSourceGenerator : IIncrementalGenerator
 {
     private static readonly Regex _outputRegex = new(@"// Output:\s*", RegexOptions.Compiled);
     private static readonly Regex _commentRegex = new(@"^\s*(//( |$))?", RegexOptions.Compiled);
-    private static readonly Regex _specialCharsRegex = new(@"[ <>*'"".,_\-&#^@]", RegexOptions.Compiled);
+    private static readonly Regex _specialCharsRegex = new(@"[ <>*~`'"".,_\-+&#^@]", RegexOptions.Compiled);
 
 #pragma warning disable RS2008  // Enable analyzer release tracking
     private static readonly DiagnosticDescriptor _missingDocFile
