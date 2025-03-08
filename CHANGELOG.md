@@ -1,3 +1,8 @@
+v2.0.0
+------
+
+* A new design using source generators
+
 v1.1.0
 ------
 
