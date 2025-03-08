@@ -7,6 +7,7 @@
         <EnforceExtendedAnalyzerRules>true</EnforceExtendedAnalyzerRules>
         <!-- no symbols to include - analyser only -->
         <IncludeSymbols>false</IncludeSymbols>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
     </PropertyGroup>
 
     <ItemGroup>
@@ -32,6 +33,11 @@
             <PackagePath>lib/netstandard2.0</PackagePath>
             <Visible>false</Visible>
         </None>
+        <None Include="..\README.md">
+            <Pack>true</Pack>
+            <PackagePath>/</PackagePath>
+        </None>
+
     </ItemGroup>
 
 
