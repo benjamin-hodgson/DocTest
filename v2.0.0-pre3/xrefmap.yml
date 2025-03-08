@@ -1,0 +1,45 @@
+### YamlMime:XRefMap
+sorted: true
+references:
+- uid: Benjamin.Pizza.DocTest.SourceGenerator
+  name: Benjamin.Pizza.DocTest.SourceGenerator
+  href: Benjamin.Pizza.DocTest.SourceGenerator.html
+  commentId: N:Benjamin.Pizza.DocTest.SourceGenerator
+  fullName: Benjamin.Pizza.DocTest.SourceGenerator
+  nameWithType: Benjamin.Pizza.DocTest.SourceGenerator
+- uid: Benjamin.Pizza.DocTest.SourceGenerator.DocTestSourceGenerator
+  name: DocTestSourceGenerator
+  href: Benjamin.Pizza.DocTest.SourceGenerator.DocTestSourceGenerator.html
+  commentId: T:Benjamin.Pizza.DocTest.SourceGenerator.DocTestSourceGenerator
+  fullName: Benjamin.Pizza.DocTest.SourceGenerator.DocTestSourceGenerator
+  nameWithType: DocTestSourceGenerator
+- uid: Benjamin.Pizza.DocTest.SourceGenerator.DocTestSourceGenerator.#ctor
+  name: DocTestSourceGenerator()
+  href: Benjamin.Pizza.DocTest.SourceGenerator.DocTestSourceGenerator.html#Benjamin_Pizza_DocTest_SourceGenerator_DocTestSourceGenerator__ctor
+  commentId: M:Benjamin.Pizza.DocTest.SourceGenerator.DocTestSourceGenerator.#ctor
+  name.vb: New()
+  fullName: Benjamin.Pizza.DocTest.SourceGenerator.DocTestSourceGenerator.DocTestSourceGenerator()
+  fullName.vb: Benjamin.Pizza.DocTest.SourceGenerator.DocTestSourceGenerator.New()
+  nameWithType: DocTestSourceGenerator.DocTestSourceGenerator()
+  nameWithType.vb: DocTestSourceGenerator.New()
+- uid: Benjamin.Pizza.DocTest.SourceGenerator.DocTestSourceGenerator.#ctor*
+  name: DocTestSourceGenerator
+  href: Benjamin.Pizza.DocTest.SourceGenerator.DocTestSourceGenerator.html#Benjamin_Pizza_DocTest_SourceGenerator_DocTestSourceGenerator__ctor_
+  commentId: Overload:Benjamin.Pizza.DocTest.SourceGenerator.DocTestSourceGenerator.#ctor
+  name.vb: New
+  fullName: Benjamin.Pizza.DocTest.SourceGenerator.DocTestSourceGenerator.DocTestSourceGenerator
+  fullName.vb: Benjamin.Pizza.DocTest.SourceGenerator.DocTestSourceGenerator.New
+  nameWithType: DocTestSourceGenerator.DocTestSourceGenerator
+  nameWithType.vb: DocTestSourceGenerator.New
+- uid: Benjamin.Pizza.DocTest.SourceGenerator.DocTestSourceGenerator.Initialize(Microsoft.CodeAnalysis.IncrementalGeneratorInitializationContext)
+  name: Initialize(IncrementalGeneratorInitializationContext)
+  href: Benjamin.Pizza.DocTest.SourceGenerator.DocTestSourceGenerator.html#Benjamin_Pizza_DocTest_SourceGenerator_DocTestSourceGenerator_Initialize_Microsoft_CodeAnalysis_IncrementalGeneratorInitializationContext_
+  commentId: M:Benjamin.Pizza.DocTest.SourceGenerator.DocTestSourceGenerator.Initialize(Microsoft.CodeAnalysis.IncrementalGeneratorInitializationContext)
+  fullName: Benjamin.Pizza.DocTest.SourceGenerator.DocTestSourceGenerator.Initialize(Microsoft.CodeAnalysis.IncrementalGeneratorInitializationContext)
+  nameWithType: DocTestSourceGenerator.Initialize(IncrementalGeneratorInitializationContext)
+- uid: Benjamin.Pizza.DocTest.SourceGenerator.DocTestSourceGenerator.Initialize*
+  name: Initialize
+  href: Benjamin.Pizza.DocTest.SourceGenerator.DocTestSourceGenerator.html#Benjamin_Pizza_DocTest_SourceGenerator_DocTestSourceGenerator_Initialize_
+  commentId: Overload:Benjamin.Pizza.DocTest.SourceGenerator.DocTestSourceGenerator.Initialize
+  fullName: Benjamin.Pizza.DocTest.SourceGenerator.DocTestSourceGenerator.Initialize
+  nameWithType: DocTestSourceGenerator.Initialize

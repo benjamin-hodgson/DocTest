@@ -1,0 +1,17 @@
+{
+  "Benjamin.Pizza.DocTest.SourceGenerator.DocTestSourceGenerator.html": {
+    "href": "Benjamin.Pizza.DocTest.SourceGenerator.DocTestSourceGenerator.html",
+    "title": "Class DocTestSourceGenerator | Benjamin.Pizza.DocTest",
+    "keywords": "Class DocTestSourceGenerator Source generator for doctests. Inheritance object DocTestSourceGenerator Implements IIncrementalGenerator Inherited Members object.GetType() object.MemberwiseClone() object.ToString() object.Equals(object) object.Equals(object, object) object.ReferenceEquals(object, object) object.GetHashCode() Declaration public class DocTestSourceGenerator : IIncrementalGenerator Constructors DocTestSourceGenerator() Source generator for doctests. Declaration public DocTestSourceGenerator() Methods Initialize(IncrementalGeneratorInitializationContext) Initialise the source generator. Declaration public void Initialize(IncrementalGeneratorInitializationContext context) Parameters Type Name Description IncrementalGeneratorInitializationContext context The context. Implements Microsoft.CodeAnalysis.IIncrementalGenerator"
+  },
+  "Benjamin.Pizza.DocTest.SourceGenerator.html": {
+    "href": "Benjamin.Pizza.DocTest.SourceGenerator.html",
+    "title": "Namespace Benjamin.Pizza.DocTest.SourceGenerator | Benjamin.Pizza.DocTest",
+    "keywords": "Namespace Benjamin.Pizza.DocTest.SourceGenerator Classes DocTestSourceGenerator Source generator for doctests."
+  },
+  "index.html": {
+    "href": "index.html",
+    "title": "Page Redirection",
+    "keywords": ""
+  }
+}
