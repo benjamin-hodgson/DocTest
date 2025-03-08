@@ -53,10 +53,64 @@ public class SourceGeneratorTests
 
             public partial class MyDocTests
             {
-                [Xunit.Fact]
+                [Xunit.Fact(DisplayName = "My example > 0")]
                 [System.CodeDom.Compiler.GeneratedCode("Benjamin.Pizza.DocTest", "1.0.0")]
                 #pragma warning disable CS1998 // Async method lacks 'await' operators and will run synchronously
-                public static async Task My_example()
+                public static async Task My_example___0()
+                #pragma warning restore CS1998 // Async method lacks 'await' operators and will run synchronously
+                {
+                    var __doctest_redirector = new Benjamin.Pizza.DocTest.ConsoleRedirector();
+                    using (__doctest_redirector)
+                    {
+                        Console.WriteLine("hello");
+                        // Output:
+                        // hello
+                    }
+
+                    Xunit.Assert.Equal("", __doctest_redirector.CapturedConsoleError);
+                    Xunit.Assert.Equal(
+                        [
+                            "hello",
+                            ""
+                        ],
+                        __doctest_redirector.CapturedConsoleOut.Split(
+                            ["\r\n", "\n"],
+                            System.StringSplitOptions.None
+                        )
+                    );
+                }
+
+                [Xunit.Fact(DisplayName = "My example > 1")]
+                [System.CodeDom.Compiler.GeneratedCode("Benjamin.Pizza.DocTest", "1.0.0")]
+                #pragma warning disable CS1998 // Async method lacks 'await' operators and will run synchronously
+                public static async Task My_example___1()
+                #pragma warning restore CS1998 // Async method lacks 'await' operators and will run synchronously
+                {
+                    var __doctest_redirector = new Benjamin.Pizza.DocTest.ConsoleRedirector();
+                    using (__doctest_redirector)
+                    {
+                        Console.WriteLine("hello 2");
+                        // Output:
+                        // hello 2
+                    }
+
+                    Xunit.Assert.Equal("", __doctest_redirector.CapturedConsoleError);
+                    Xunit.Assert.Equal(
+                        [
+                            "hello 2",
+                            ""
+                        ],
+                        __doctest_redirector.CapturedConsoleOut.Split(
+                            ["\r\n", "\n"],
+                            System.StringSplitOptions.None
+                        )
+                    );
+                }
+
+                [Xunit.Fact(DisplayName = "Another example")]
+                [System.CodeDom.Compiler.GeneratedCode("Benjamin.Pizza.DocTest", "1.0.0")]
+                #pragma warning disable CS1998 // Async method lacks 'await' operators and will run synchronously
+                public static async Task Another_example()
                 #pragma warning restore CS1998 // Async method lacks 'await' operators and will run synchronously
                 {
                     var __doctest_redirector = new Benjamin.Pizza.DocTest.ConsoleRedirector();

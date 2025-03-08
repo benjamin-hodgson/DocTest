@@ -212,7 +212,7 @@ public class DocTestSourceGenerator : IIncrementalGenerator
 
                     public partial class {{tup.cls.Name}}
                     {
-                    {{string.Join("\n", CreateMethods(tup.doc))}}
+                    {{string.Join("\n\n", CreateMethods(tup.doc))}}
                     }
                     """;
 
@@ -246,7 +246,7 @@ public class DocTestSourceGenerator : IIncrementalGenerator
     {
         var methodName = GetMethodName(name);
         return $$"""
-                [Xunit.Fact]
+                [Xunit.Fact(DisplayName = {{SyntaxFactory.Literal(name)}})]
                 [System.CodeDom.Compiler.GeneratedCode("Benjamin.Pizza.DocTest", "1.0.0")]
                 #pragma warning disable CS1998 // Async method lacks 'await' operators and will run synchronously
                 public static async Task {{methodName}}()
@@ -273,7 +273,7 @@ public class DocTestSourceGenerator : IIncrementalGenerator
     }
 
     private string GetMethodName(string name)
-        => name.Replace(' ', '_');
+        => name.Replace(' ', '_').Replace('>', '_');
 
     private string GetExpected(string code)
     {

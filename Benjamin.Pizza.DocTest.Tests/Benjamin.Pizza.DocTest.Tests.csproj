@@ -17,8 +17,11 @@
     <ItemGroup>
         <ProjectReference Include="../Benjamin.Pizza.DocTest/Benjamin.Pizza.DocTest.csproj">
             <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+            <OutputItemType>Analyzer</OutputItemType>
         </ProjectReference>
         <ProjectReference Include="../Benjamin.Pizza.DocTest.TestProject/Benjamin.Pizza.DocTest.TestProject.csproj" />
     </ItemGroup>
+
+    <Import Project="../Benjamin.Pizza.DocTest/build/Benjamin.Pizza.DocTest.targets" />
 
 </Project>
